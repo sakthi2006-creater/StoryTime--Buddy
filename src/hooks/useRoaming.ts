@@ -32,7 +32,6 @@ export function useRoaming(opts: {
       const minY = padTop;
       // bottom limit = top of avoid rect (minus small gap), or stage bottom
       const avoidTopLocal = avoidRect ? avoidRect.top - stage.top - 12 : stage.height - padX;
-
       const maxY = Math.max(minY + 1, avoidTopLocal - size.h);
 
       if (maxX <= minX || maxY <= minY) return;
